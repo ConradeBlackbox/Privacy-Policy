@@ -1,37 +1,28 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KolKol Privacy Policy — BlackBox Industries PTY</title><style>body{font:16px/1.7 system-ui,sans-serif;color:#243044;background:#f5f7fa;margin:0}main{max-width:850px;margin:36px auto;padding:38px;background:white;border-radius:12px}h1,h2{color:#152238;line-height:1.25}h1{font-size:32px}h2{margin-top:32px;font-size:22px}a{color:#075ca8}li{margin:8px 0}.date{color:#596579}aside{background:#fff4da;border-left:4px solid #b07800;padding:16px} @media(max-width:600px){main{margin:0;padding:24px;border-radius:0}}</style></head><body><main>
 
-<h1>KolKol Privacy Policy</h1><p class="date">Last updated: 5 November 2026</p>
-<p>This policy explains how BlackBox Industries PTY ("we", "us" or "our") handles information when you use the KolKol mobile application to set up, monitor and control a compatible hot-tub controller. For privacy questions or requests, email <a href="mailto:info@blackbox.co.za">info@blackbox.co.za</a>.</p>
+<h1>KolKol Privacy Policy</h1><p class="date">Last updated: 9 November 2026</p>
+<p>This policy explains how BlackBox Industries PTY handles information when you use the KolKol mobile application to set up, monitor and control a compatible hot-tub controller.</p>
 <h2>1. Information used by KolKol</h2>
-<p>KolKol's core functionality uses controller information rather than personal profiles. Information handled for that functionality includes:</p>
-<ul><li><strong>Controller identifiers and connection settings:</strong> the selected controller's serial number or device identifier, Bluetooth discovery information and settings needed to connect to the controller or messaging service.</li><li><strong>Operating information:</strong> water and heater temperatures, target temperatures, heating commands, operating modes, schedules, alarms, connection status and firmware information.</li><li><strong>Wi-Fi setup information:</strong> the Wi-Fi network name and password you enter to connect your controller to your network.</li><li><strong>Authentication information:</strong> technical MQTT service credentials used by the app to connect to the broker. The current implementation uses shared service credentials rather than individual user login credentials.</li><li><strong>Support correspondence:</strong> your email address and any information you voluntarily send when asking us for help. Please do not include Wi-Fi passwords or other secrets in support messages.</li></ul>
-<p>Wi-Fi credentials and authentication information are handled as credentials even though the app's primary purpose is device control.</p>
-<h2>2. Local Bluetooth setup and permissions</h2>
-<p>During Wi-Fi setup, the app transfers the Wi-Fi credentials you enter directly to your controller over Bluetooth Low Energy (BLE). This setup transfer does not send your home Wi-Fi password through the internet or the MQTT broker. The controller uses those credentials to connect to your Wi-Fi network.</p>
-<p>KolKol uses Bluetooth/nearby-device permissions to discover and communicate with compatible controllers, and Wi-Fi permissions for network setup features. Depending on your Android version, location permission or enabled location services may be required for wireless scanning. The purpose of this access is discovering nearby devices or networks, not tracking your movements. Permissions can be changed in your phone's system settings; disabling them may prevent setup or local control.</p>
-<h2>3. Internet connections and remote control</h2>
-<p>When remote control is used, KolKol exchanges controller identifiers, control commands and operating information through an MQTT broker. The broker authenticates the app using service credentials and routes messages between the app and the controller.</p>
-<p>Network connections necessarily expose connection information, such as the connecting IP address, to the broker and relevant network infrastructure. Controller identifiers can distinguish one controller from another, even when they do not contain a person's name.</p>
+<p>KolKol uses device information to set up and operate your hot tub. The app does not require a personal account or collect personal profile information for these features.</p>
+<h2>2. Local setup and permissions</h2>
+<p>During setup, the app sends the Wi-Fi details you enter directly to your controller over Bluetooth. The controller uses these details to join your network.</p>
+<p>KolKol uses Bluetooth and Wi-Fi permissions for device discovery and setup. Android may require location permission for nearby wireless scanning. You can manage these permissions in your phone's settings.</p>
+<h2>3. Remote control</h2>
+<p>Remote control uses an online service to connect the app to your hot tub.</p>
 <h2>4. How information is used and shared</h2>
-<p>Information is used to configure your controller, route commands to the selected device, display its status, perform supported maintenance functions, troubleshoot faults and respond to support requests.</p>
-<p>Remote-control information is processed by the MQTT broker and, where applicable, the infrastructure or hosting providers operating that service. Your selected controller receives commands and setup information needed for its operation. Support information is handled through our support and email services. We do not sell personal information. Information may also be disclosed where required by applicable law.</p>
-<h2>5. Security and data handling procedures</h2>
-<ul><li><strong>Local credential transfer:</strong> home Wi-Fi credentials are transferred to the controller through the local BLE setup connection rather than being routed through the internet messaging service.</li><li><strong>Broker authentication:</strong> the app supplies an MQTT username and password when connecting to the broker. These are shared service credentials; they are not a separate user identity or a guarantee that other clients cannot access a device's messages.</li><li><strong>Separation of purposes:</strong> Wi-Fi setup credentials are used to configure network connectivity; remote messages carry controller commands and operating information.</li><li><strong>Current transport limitation:</strong> the MQTT app implementation reviewed for this policy does not enable TLS. MQTT service credentials and remote messages therefore do not receive transport encryption from that implementation. Authentication and binary message formatting do not provide encryption. This policy makes no claim that all communications or stored credentials are encrypted.</li></ul>
-<p>Bluetooth communication is local, but locality alone does not establish that the BLE connection is encrypted. No electronic storage or communication method is completely secure. If you suspect unauthorised access to your controller or information, contact us at <a href="mailto:info@blackbox.co.za">info@blackbox.co.za</a>.</p>
+<p>The online service and its hosting providers process information needed for remote control.</p>
+<h2>5. Security and data handling</h2>
+<p>Wi-Fi setup takes place over a direct Bluetooth connection to your controller.</p>
 <h2>6. Retention and deletion</h2>
-<p>Controller setup information remains on the controller as needed for its operation, until it is changed or removed through the controller's supported configuration or reset procedure. Clearing the mobile app does not itself erase settings stored on the controller.</p>
-<p>Saved app settings can be removed by clearing the app's storage through Android settings. This does not remove any information independently retained by the controller, broker or support services.</p>
-<p>We retain support correspondence and other information under our control only as long as needed for the purpose for which it was obtained, or to meet applicable legal requirements. Information no longer required is deleted or anonymised; any information that must remain in backups is retained until the applicable backup cycle expires.</p>
-<p><strong>Broker retention:</strong> The MQTT broker acts only as a bridge, relaying messages between the app and controllers. The broker and its hosting service do not retain connection logs, IP addresses, retained messages, offline queued messages or backups of this information. Messages are processed transiently as needed for delivery and are not stored as a historical record.</p>
-<h2>7. Your choices and privacy requests</h2>
+<p>Saved app settings can be removed by clearing the app's storage through Android settings. This only removes settings stored on your phone.</p>
+<p>The remote control service does not keep device or connection information after processing it.</p>
+<h2>7. Your choices</h2>
 <p>You can revoke app permissions in your device settings, stop using remote connectivity, or clear local app storage. Some features will no longer work if the required access is disabled.</p>
-<p>To request access, correction or deletion of information under our control, email <a href="mailto:info@blackbox.co.za?subject=KolKol%20privacy%20request">info@blackbox.co.za</a> with the subject "KolKol privacy request". Identify the information concerned; do not send passwords. We may request proportionate verification before disclosing information or changing a controller-related record. We will explain any legal retention requirement or technical limitation affecting the request.</p>
-<p>Your rights depend on applicable law, including South Africa's Protection of Personal Information Act where applicable. You may also raise concerns with the relevant data protection authority.</p>
 <h2>8. Children</h2>
-<p>KolKol is intended for adults responsible for operating compatible hot-tub equipment. We do not knowingly collect personal information from children under 18. If you believe a child has provided us with personal information, contact us so we can investigate and arrange appropriate deletion.</p>
+<p>KolKol is intended for adults responsible for operating compatible hot-tub equipment.</p>
 <h2>9. Changes to this policy</h2>
 <p>We may update this policy when functionality or information-handling practices change. The date above identifies the latest revision. Material changes will be communicated through an appropriate notice.</p>
 <h2>10. Contact</h2>
-<p>BlackBox Industries PTY<br>Email: <a href="mailto:info@blackbox.co.za">info@blackbox.co.za</a><br>175 Saint Francis Drive<br>Saint Francis Bay, Eastern Cape 6312<br>South Africa</p>
+<p>BlackBox Industries PTY<br>175 Saint Francis Drive<br>Saint Francis Bay, Eastern Cape 6312<br>South Africa</p>
 </main></body></html>
