@@ -1,28 +1,54 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KolKol Privacy Policy — BlackBox Industries PTY</title><style>body{font:16px/1.7 system-ui,sans-serif;color:#243044;background:#f5f7fa;margin:0}main{max-width:850px;margin:36px auto;padding:38px;background:white;border-radius:12px}h1,h2{color:#152238;line-height:1.25}h1{font-size:32px}h2{margin-top:32px;font-size:22px}a{color:#075ca8}li{margin:8px 0}.date{color:#596579}aside{background:#fff4da;border-left:4px solid #b07800;padding:16px} @media(max-width:600px){main{margin:0;padding:24px;border-radius:0}}</style></head><body><main>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KolKol Privacy Policy — BlackBox Industries PTY</title><style>body{font:16px/1.7 system-ui,sans-serif;color:#243044;background:#f5f7fa;margin:0}main{max-width:850px;margin:36px auto;padding:38px;background:white;border-radius:12px}h1,h2{color:#152238;line-height:1.25}h1{font-size:32px}h2{margin-top:32px;font-size:22px}a{color:#075ca8}li{margin:8px 0}.date{color:#596579} @media(max-width:600px){main{margin:0;padding:24px;border-radius:0}}</style></head><body><main>
 
-<h1>KolKol Privacy Policy</h1><p class="date">Last updated: 9 November 2026</p>
-<p>This policy explains how BlackBox Industries PTY handles information when you use the KolKol mobile application to set up, monitor and control a compatible hot-tub controller.</p>
-<h2>1. Information used by KolKol</h2>
-<p>KolKol uses device information to set up and operate your hot tub. The app does not require a personal account or collect personal profile information for these features.</p>
-<h2>2. Local setup and permissions</h2>
-<p>During setup, the app sends the Wi-Fi details you enter directly to your controller over Bluetooth. The controller uses these details to join your network.</p>
-<p>KolKol uses Bluetooth and Wi-Fi permissions for device discovery and setup. Android may require location permission for nearby wireless scanning. You can manage these permissions in your phone's settings.</p>
-<h2>3. Remote control</h2>
-<p>Remote control uses an online service to connect the app to your hot tub.</p>
-<h2>4. How information is used and shared</h2>
-<p>The online service and its hosting providers process information needed for remote control.</p>
-<h2>5. Security and data handling</h2>
-<p>Wi-Fi setup takes place over a direct Bluetooth connection to your controller.</p>
-<h2>6. Retention and deletion</h2>
-<p>Saved app settings can be removed by clearing the app's storage through Android settings. This only removes settings stored on your phone.</p>
-<p>The remote control service does not keep device or connection information after processing it.</p>
-<h2>7. Your choices</h2>
-<p>You can revoke app permissions in your device settings, stop using remote connectivity, or clear local app storage. Some features will no longer work if the required access is disabled.</p>
-<h2>8. Children</h2>
-<p>KolKol is intended for adults responsible for operating compatible hot-tub equipment.</p>
-<h2>9. Changes to this policy</h2>
-<p>We may update this policy when functionality or information-handling practices change. The date above identifies the latest revision. Material changes will be communicated through an appropriate notice.</p>
-<h2>10. Contact</h2>
-<p>BlackBox Industries PTY<br>175 Saint Francis Drive<br>Saint Francis Bay, Eastern Cape 6312<br>South Africa</p>
+<h1>KolKol Privacy Policy</h1><p class="date">Last updated: 10 November 2026</p>
+<p>This privacy policy explains how BlackBox Industries PTY ("we", "us" or "our") handles information when you use the KolKol mobile app to set up and control a compatible hot-tub controller. For privacy questions or requests, email <a href="mailto:info@blackbox.co.za">info@blackbox.co.za</a>.</p>
+
+<h2>1. Information KolKol uses</h2>
+<p>KolKol does not require an account and does not collect your name, email address, contacts, location or other personal profile information. To operate your hot tub, it uses only:</p>
+<ul>
+<li>your controller's identifier and settings;</li>
+<li>temperatures, schedules, alarms and status reported by the controller; and</li>
+<li>the Wi-Fi network name and password you enter during setup, which are sent only to your controller.</li>
+</ul>
+
+<h2>2. How information is used and shared</h2>
+<p>This information is used only to set up your controller, send it commands and show its status in the app. For remote control, commands and status pass through our messaging server (an MQTT broker) and its hosting provider. Like any internet service, the server sees your connection's IP address while it relays messages.</p>
+<p>We do not sell information, use it for advertising or share it with anyone else, except where required by law.</p>
+
+<h2>3. Secure data handling procedures</h2>
+<p>We protect personal and sensitive user data with the following procedures:</p>
+<ul>
+<li><strong>Device pairing:</strong> Your phone must be paired with your controller over a direct Bluetooth connection before it can control it. The controller only accepts commands from paired phones.</li>
+<li><strong>Message validation:</strong> Each controller has its own messaging topic. Messages are checked with a key set up during pairing, and the controller ignores any message that fails the check.</li>
+<li><strong>Wi-Fi credentials stay local:</strong> Your Wi-Fi password is sent only to your controller, over a direct Bluetooth connection. It is never sent to or stored on our servers.</li>
+<li><strong>No personal data in messages:</strong> Remote messages carry only controller commands and operating information. They contain no names, accounts, Wi-Fi passwords or location.</li>
+<li><strong>No message storage:</strong> Our messaging server relays messages for delivery only. It does not store messages, IP addresses or connection logs.</li>
+<li><strong>Private on-device storage:</strong> App settings are kept in KolKol's private app storage on your phone, which other apps cannot access.</li>
+<li><strong>Limited permissions:</strong> Bluetooth, Wi-Fi and, on some Android versions, location permissions are used only to find and set up nearby controllers. KolKol does not track or store your location.</li>
+</ul>
+<p>No method of electronic storage or transmission is completely secure. If you suspect unauthorised access to your controller, contact us at <a href="mailto:info@blackbox.co.za">info@blackbox.co.za</a>.</p>
+
+<h2>4. Data retention and deletion</h2>
+<ul>
+<li>App settings stay on your phone until you clear KolKol's storage in Android settings or uninstall the app.</li>
+<li>Settings on the controller, including Wi-Fi details, stay there until you change them or reset the controller.</li>
+<li>Our messaging server does not keep device or connection information after delivering a message.</li>
+<li>To ask about or request deletion of information, email <a href="mailto:info@blackbox.co.za?subject=KolKol%20privacy%20request">info@blackbox.co.za</a> with the subject "KolKol privacy request".</li>
+</ul>
+
+<h2>5. Your choices</h2>
+<p>You can revoke app permissions in your phone's settings, stop using remote control, or clear KolKol's storage. Some features will stop working if the required access is turned off.</p>
+
+<h2>6. Children</h2>
+<p>KolKol is intended for adults responsible for operating compatible hot-tub equipment and is not aimed at children under 18.</p>
+
+<h2>7. Your rights</h2>
+<p>You have rights under South Africa's Protection of Personal Information Act (POPIA) and may raise concerns with the Information Regulator.</p>
+
+<h2>8. Changes to this policy</h2>
+<p>We may update this policy when the app or our practices change. The date above shows the latest revision.</p>
+
+<h2>9. Contact</h2>
+<p>BlackBox Industries PTY<br>Email: <a href="mailto:info@blackbox.co.za">info@blackbox.co.za</a><br>175 Saint Francis Drive<br>Saint Francis Bay, Eastern Cape 6312<br>South Africa</p>
 </main></body></html>
